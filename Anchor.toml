@@ -1,0 +1,16 @@
+[features]
+seeds = false
+[programs.localnet]
+solkitties = "9GJsbXNCL15vfZy7Z5WvKMD17ZCJFw6wEJkxAvEJa2kn"
+[programs.devnet]
+solkitties = "9GJsbXNCL15vfZy7Z5WvKMD17ZCJFw6wEJkxAvEJa2kn"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/home/earth/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
