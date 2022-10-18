@@ -10,23 +10,22 @@ async function main() {
   const connection = new Connection("https://api.devnet.solana.com");
 
   const authority = getKeypairFromString("");
-
+  // anchor.setProvider(anchor.AnchorProvider.env());
   const provider = new anchor.AnchorProvider(connection, new anchor.Wallet(authority), anchor.AnchorProvider.defaultOptions());
   const program = new anchor.Program(IDL, PROGRAM_ID, provider);
 
-  /*
+  
   await initialize(program, authority,
     new BN(5_000_000), // Ticket price
     new BN(100), // Total supply
     new BN(new Date().getTime() / 1000), // End date
   )
-  */
 
-  await updateState(program, authority,
-    new BN(10_000_000), // Ticket price
-    new BN(100), // Total supply
-    new BN(new Date().getTime() / 1000 + 60 * 60), // End date
-  )
+  // await updateState(program, authority,
+  //   new BN(10_000_000), // Ticket price
+  //   new BN(100), // Total supply
+  //   new BN(new Date().getTime() / 1000 + 60 * 60), // End date
+  // )
 }
 
 main().then(

@@ -1,9 +1,11 @@
 [features]
 seeds = false
-[programs.localnet]
-solkitties = "9GJsbXNCL15vfZy7Z5WvKMD17ZCJFw6wEJkxAvEJa2kn"
+
+# [programs.localnet]
+# solkitties = "C7KGdk3H9yTvZF7TDPeJJwvNo5jMSie4onZ3XLzToTVc"
+
 [programs.devnet]
-solkitties = "9GJsbXNCL15vfZy7Z5WvKMD17ZCJFw6wEJkxAvEJa2kn"
+solkitties = "C7KGdk3H9yTvZF7TDPeJJwvNo5jMSie4onZ3XLzToTVc"
 
 [registry]
 url = "https://anchor.projectserum.com"
@@ -14,3 +16,4 @@ wallet = "/home/earth/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+init-state = "ts-node client/index.ts"

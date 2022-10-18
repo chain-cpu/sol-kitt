@@ -1,7 +1,7 @@
 import { BN } from "@project-serum/anchor";
 import { PublicKey } from "@solana/web3.js";
 
-export const SOLKITTIES_PROGRAM_ID = new PublicKey("9GJsbXNCL15vfZy7Z5WvKMD17ZCJFw6wEJkxAvEJa2kn");
+export const SOLKITTIES_PROGRAM_ID = new PublicKey("C7KGdk3H9yTvZF7TDPeJJwvNo5jMSie4onZ3XLzToTVc");
 
 export const SOLKITTIES_PREFIX = 'solkitties';
 

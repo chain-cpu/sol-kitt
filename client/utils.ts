@@ -6,13 +6,13 @@ import { PublicKey, LAMPORTS_PER_SOL, Keypair } from '@solana/web3.js';
 export const PREFIX = 'solkitties';
 export const SALE = 'sale';
 
-export const PROGRAM_ID = new PublicKey("9GJsbXNCL15vfZy7Z5WvKMD17ZCJFw6wEJkxAvEJa2kn");
+export const PROGRAM_ID = new PublicKey("C7KGdk3H9yTvZF7TDPeJJwvNo5jMSie4onZ3XLzToTVc");
 
 export const sleep = async (seconds) => {
   await new Promise(f => setTimeout(f, 1000 * seconds));
 }
 
-export function getKeypairFromString(str: string): Keypair {
+export function getKeypairFromString(str): Keypair {
   return Keypair.fromSecretKey(bs58.decode(str));
 }
 

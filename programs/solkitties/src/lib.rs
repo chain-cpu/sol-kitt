@@ -3,7 +3,7 @@ use anchor_lang::{
     solana_program::{clock, program::invoke, system_instruction},
 };
 
-declare_id!("9GJsbXNCL15vfZy7Z5WvKMD17ZCJFw6wEJkxAvEJa2kn");
+declare_id!("C7KGdk3H9yTvZF7TDPeJJwvNo5jMSie4onZ3XLzToTVc");
 
 pub mod constant;
 pub mod error;
@@ -84,7 +84,8 @@ pub mod solkitties {
             .ok_or(SolkittiesError::MathOverflow)?;
 
         // Transfer SOL
-        let sol_amount = global_state.ticket_price
+        let sol_amount = global_state
+            .ticket_price
             .checked_mul(amount)
             .ok_or(SolkittiesError::MathOverflow)?;
 
